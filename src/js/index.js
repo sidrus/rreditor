@@ -2,7 +2,6 @@
 
 // import jQuery library
 window.$ = window.jQuery = require('jquery')
-require('malihu-custom-scrollbar-plugin')($)
 
 function printProcesses() {
   let pinfo = $("#processInfo")
