@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- '8'
+matrix:
+  include:
+  - os: linux
+    dist: xenial
+    sudo: required
+  - os: osx
+cache:
+  yarn: true
+notifications:
+  email: true
+script:
+- yarn dist
+deploy:
+  provider: releases
+  api_key:
+    secure: gIqjpg/wI9X43Z1jzJsCJORjE23a75L5jfL8ObZumETke51hGC6bBwiqyT0vzLCmcp71HpH8yzWa67ik1dR+gbHCq33fNTCbgSgkBwvvMye55D/ZHqe+z0YxPlb/eikcn5dJZhmLmkAfoIuZWBeBtj19bQGRSqDJnYmGlpa7yDqOjr2QlO4493egCaribdFgnRux9HOvgB2lycMJ+VAg+p9U8Y3VkPy1kU2nyigghpAw8NP1RC8RQ6OdatiYWTRsuzkE9gLs8dmErfV8Fn6s3kzCrsCwV6RdVwbxvAUT4DJmFU80XYj0S27DocVNCnDD/tyZZ6w92Aa0wr/Ks116ZPfqRxSLpcB+/CimcwypqDRDB1VUyrqRujfXXBKZ8GUuKywSBZJo7hpit7f+89d/2GQBXSkyco98/5QK3MnL3UhPB//lFhU7In+gOz47eWXKhFncG3BK1RSueYRrS+iRzpSvyE7RT+GM2vpTL88SWHUAs9+VeTr8zv0hYkTj9O5xLrgXsSXFIWh8oJtdmfL96W759Cp9P3sVvWG8wVrkg+YyNNDlfs/CcBsLVA+J/Umi9R0jGaJJerlf3e+qZHUeDu2Y9mdzQW5Drsijtjtzn+K6Fm7OK3IZsV8qC7bD3Z2V3bBHv3LzD92kF2PvN6r+XYkamGvSVA4xKlXQiTPABBs=
+  on:
+    repo: sidrus/rreditor
